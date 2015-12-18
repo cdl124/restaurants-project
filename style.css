@@ -58,7 +58,6 @@ hr {
 
 /* For INDEX.HTML *********************************************************** */
 
-
 /* Left-side stuff - form */
 aside {
   background-color: #F2594B;
@@ -124,6 +123,10 @@ position: relative; }
 
 #displaySearchResults { /* Table */
   margin: auto; }
+
+tr {
+  margin-bottom: 2em;
+}
 
 /* For REVIEW.HTML ********************************************************** */
 

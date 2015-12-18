@@ -12,7 +12,6 @@
   <img class='logo' src='images/cflogo.png' />
   <h1>Restaurant Finder</h1>
   <ul id="links">
-    <li><a href="review.html">Reviews</a></li>
     <li><a href="about.html">About the Team</a></li>
   </ul>
 </header>
@@ -24,26 +23,26 @@
     <legend>Make One or More Selections Below:</legend>
     <hr />
       <form id = "distanceOfRes">
-        <input type="radio" name="distance" value="Within 1 Block" checked>Within 1 Block
+        <input type="radio" name="radius" value="100" checked>300 feet
         <br>
-        <input type="radio" name="distance" value="Within 2 Blocks">Within 2 Blocks
+        <input type="radio" name="radius" value="150">450 feet
+       <br>
+        <input type="radio" name="radius" value="200">600 feet
         <br>
-        <input type="radio" name="distance" value="Within 3 Blocks">Within 3 Blocks
+        <input type="radio" name="radius" value="250">750 feet
         <br>
-        <input type="radio" name="distance" value="Within 4 Blocks">Within 4 Blocks
-        <br>
-        <input type="radio" name="distance" value="Within 5 Blocks">Within 5 Blocks
+        <input type="radio" name="radius" value="300">900 feet
         <br>
       </form>
-      <hr />
+      <hr>
       <form id = "foodPrice">
-        <input type = "radio" name = "price" value = "$"checked>$
+        <input type = "radio" name = "maxPriceLevel" value = "1"checked>$
         <br>
-        <input type = "radio" name = "price" value = "$$">$$
+        <input type = "radio" name = "maxPriceLevel" value = "2">$$
         <br>
-        <input type = "radio" name = "price" value = "$$$">$$$
+        <input type = "radio" name = "maxPriceLevel" value = "3">$$$
         <br>
-        <input type = "radio" name = "price" value = "$$$$">$$$$
+        <input type = "radio" name = "maxPriceLevel" value = "4">$$$$
       </form>
      <button id = "search" type = "submit">SUBMIT</button>
   </fieldset>
@@ -63,74 +62,12 @@
 
 <table id='displaySearchResults'>
   <tbody id='searchResults' style="min-height: 100px">
-    <thead class='restaurants'>Restaurant</thead>
-      <tr id='rest1'></tr>
-      <tr id='rest2'></tr>
-      <tr id='rest3'></tr>
-      <tr id='rest4'></tr>
-      <tr id='rest5'></tr>
-      <tr id='rest6'></tr>
-      <tr id='rest7'></tr>
-      <tr id='rest8'></tr>
-      <tr id='rest9'></tr>
-      <tr id='rest10'></tr>
-      <tr id='rest11'></tr>
-      <tr id='rest12'></tr>
-      <tr id='rest13'></tr>
-      <tr id='rest14'></tr>
-      <tr id='rest15'></tr>
-      <tr id='rest16'></tr>
-      <tr id='rest17'></tr>
-      <tr id='rest18'></tr>
-      <tr id='rest19'></tr>
-      <tr id='rest20'></tr>
 
-    </thead>
-    <thead class='vicinity'>Address</thead>
-      <tr id='place1'></tr>
-      <tr id='place2'></tr>
-      <tr id='place3'></tr>
-      <tr id='place4'></tr>
-      <tr id='place5'></tr>
-      <tr id='place6'></tr>
-      <tr id='place7'></tr>
-      <tr id='place8'></tr>
-      <tr id='place9'></tr>
-      <tr id='place10'></tr>
-      <tr id='place11'></tr>
-      <tr id='place12'></tr>
-      <tr id='place13'></tr>
-      <tr id='place14'></tr>
-      <tr id='place15'></tr>
-      <tr id='place16'></tr>
-      <tr id='place17'></tr>
-      <tr id='place18'></tr>
-      <tr id='place19'></tr>
-      <tr id='place20'></tr>
+    <tr class='restaurants'>
+    <!--<td class='vicinity'></td>
+   <td class='rating'></td> -->
+   <!-- </tr> -->
 
-    </thead>
-    <thead class='rating'>Rating</thead>
-      <tr id='rate1'></tr>
-      <tr id='rate2'></tr>
-      <tr id='rate3'></tr>
-      <tr id='rate4'></tr>
-      <tr id='rate5'></tr>
-      <tr id='rate6'></tr>
-      <tr id='rate7'></tr>
-      <tr id='rate8'></tr>
-      <tr id='rate9'></tr>
-      <tr id='rate10'></tr>
-      <tr id='rate11'></tr>
-      <tr id='rate12'></tr>
-      <tr id='rate13'></tr>
-      <tr id='rate14'></tr>
-      <tr id='rate15'></tr>
-      <tr id='rate16'></tr>
-      <tr id='rate17'></tr>
-      <tr id='rate18'></tr>
-      <tr id='rate19'></tr>
-      <tr id='rate20'></tr>
-    </thead>
   </tbody>
 </table>
 </div>
