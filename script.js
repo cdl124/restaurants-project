@@ -2,11 +2,11 @@
 // MAP DISPLAY ***********************
 var map;
 var infowindow;
-function initMap() {
+function initMap(maxPriceLevel, radius) {
   var CodeFellows = {lat: 47.6235481, lng: -122.33621199999999};
   map = new google.maps.Map(document.getElementById('map'), {
     center: CodeFellows,
-    zoom: 15
+    zoom: 16
   });
   var marker=new google.maps.Marker({
     position:CodeFellows,
@@ -54,3 +54,16 @@ function createMarker(place) {
     infowindow.open(map, this);
   });
 }
+
+
+document.getElementById('search'),addEventListener('click', function (event) {
+var maxPriceLevel = $('input[name="maxPriceLevel"]:checked').val();
+var radius = $('input[name="radius"]:checked').val();
+
+  // var maxPriceLevel = event.target.maxPriceLevel.value;
+  // var radius = event.target.radius.value;
+
+ 
+initMap(maxPriceLevel, radius);
+});
+  // google.maps.event.addListener(button, 'click', function() {
