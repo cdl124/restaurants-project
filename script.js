@@ -56,14 +56,159 @@ function createMarker(place) {
 }
 
 
-document.getElementById('search'),addEventListener('click', function (event) {
+document.getElementById('search'),addEventListener('submit', function (event) {
 var maxPriceLevel = $('input[name="maxPriceLevel"]:checked').val();
 var radius = $('input[name="radius"]:checked').val();
-
+var openNow = $('input[name="openNow"]:checked').val();
   // var maxPriceLevel = event.target.maxPriceLevel.value;
   // var radius = event.target.radius.value;
 
- 
+
 initMap(maxPriceLevel, radius);
 });
   // google.maps.event.addListener(button, 'click', function() {
+
+
+
+
+// Rating
+var Rater = {
+  r1:0,
+  r2:0,
+  r3:0,
+  r4:0,
+  r5:0,
+  totalVote:0,
+  avg:0
+}
+
+// Avg Rating Function
+var avgRating = function(){
+  var weightedSum = (Rater.r1*1)+(Rater.r2*2)+(Rater.r3*3)+(Rater.r4*4)+(Rater.r5*5);
+  var weightedAvg = weightedSum/(Rater.totalVote);
+  Rater.avg = weightedAvg;
+}
+
+// Rating: Mouse over/out events
+var berryBlank = 'images/strawberry.png';
+var berryHover = 'images/cf.png';
+
+$('#r1').mouseover(function(){
+  $('#r1').attr('src', berryHover);
+}).mouseout(function(){
+  $('#r1').attr('src',berryBlank);
+}).mouseleave(function(){
+
+})
+
+$('#r2').mouseover(function(){
+  $('#r1').attr('src', berryHover);
+  $('#r2').attr('src', berryHover);
+}).mouseout(function(){
+  $('#r1').attr('src', berryBlank);
+  $('#r2').attr('src', berryBlank);
+}).mouseleave(function(){
+  $('#r1').attr('src', berryHover);
+  $('#r2').attr('src', berryHover);
+})
+
+$('#r3').mouseover(function(){
+  $('#r1').attr('src', berryHover);
+  $('#r2').attr('src', berryHover);
+  $('#r3').attr('src', berryHover);
+}).mouseout(function(){
+  $('#r1').attr('src', berryBlank);
+  $('#r2').attr('src', berryBlank);
+  $('#r3').attr('src', berryBlank);
+}).mouseleave(function(){
+  $('#r1').attr('src', berryHover);
+  $('#r2').attr('src', berryHover);
+  $('#r3').attr('src', berryHover);
+})
+
+$('#r4').mouseover(function(){
+  $('#r1').attr('src', berryHover);
+  $('#r2').attr('src', berryHover);
+  $('#r3').attr('src', berryHover);
+  $('#r4').attr('src', berryHover);
+}).mouseout(function(){
+  $('#r1').attr('src', berryBlank);
+  $('#r2').attr('src', berryBlank);
+  $('#r3').attr('src', berryBlank);
+  $('#r4').attr('src', berryBlank);
+}).mouseleave(function(){
+  $('#r1').attr('src', berryHover);
+  $('#r2').attr('src', berryHover);
+  $('#r3').attr('src', berryHover);
+  $('#r4').attr('src', berryHover);
+})
+
+$('#r5').mouseover(function(){
+  $('#r1').attr('src', berryHover);
+  $('#r2').attr('src', berryHover);
+  $('#r3').attr('src', berryHover);
+  $('#r4').attr('src', berryHover);
+  $('#r5').attr('src', berryHover);
+}).mouseout(function(){
+  $('#r1').attr('src', berryBlank);
+  $('#r2').attr('src', berryBlank);
+  $('#r3').attr('src', berryBlank);
+  $('#r4').attr('src', berryBlank);
+  $('#r5').attr('src', berryBlank);
+}).mouseleave(function(){
+  $('#r1').attr('src', berryHover);
+  $('#r2').attr('src', berryHover);
+  $('#r3').attr('src', berryHover);
+  $('#r4').attr('src', berryHover);
+  $('#r5').attr('src', berryHover);
+})
+
+//rate choice event
+function rateChoice() {
+  var avgRate = Math.floor(Rater.avg);
+  $('.rateTitle').remove();
+  $('#rateDiv').html('<h3 class="rateTitle">You rate this restaurant '+avgRate+'/5</h3>');
+}
+
+// Rating: Click Events
+$('#r1').on('click', function(){
+  Rater.r1++;
+  Rater.totalVote++;
+  avgRating();
+  console.log(Rater);
+  rateChoice();
+});
+
+$('#r2').on('click', function(){
+  Rater.r2++;
+  Rater.totalVote++;
+  avgRating();
+  console.log(Rater);
+  rateChoice();
+});
+
+$('#r3').on('click', function(){
+  Rater.r3++;
+  Rater.totalVote++;
+  avgRating();
+  console.log(Rater);
+  rateChoice();
+});
+
+$('#r4').on('click', function(){
+  Rater.r4++;
+  Rater.totalVote++;
+  avgRating();
+  console.log(Rater);
+  rateChoice();
+});
+
+$('#r5').on('click', function(){
+  Rater.r5++;
+  Rater.totalVote++;
+  avgRating();
+  console.log(Rater);
+  rateChoice();
+});
+
+
