@@ -97,9 +97,8 @@ $('#r1').mouseover(function(){
   $('#r1').attr('src', berryHover);
 }).mouseout(function(){
   $('#r1').attr('src',berryBlank);
-}).mouseleave(function(){
-
 })
+
 
 $('#r2').mouseover(function(){
   $('#r1').attr('src', berryHover);
@@ -107,9 +106,6 @@ $('#r2').mouseover(function(){
 }).mouseout(function(){
   $('#r1').attr('src', berryBlank);
   $('#r2').attr('src', berryBlank);
-}).mouseleave(function(){
-  $('#r1').attr('src', berryHover);
-  $('#r2').attr('src', berryHover);
 })
 
 $('#r3').mouseover(function(){
@@ -120,11 +116,8 @@ $('#r3').mouseover(function(){
   $('#r1').attr('src', berryBlank);
   $('#r2').attr('src', berryBlank);
   $('#r3').attr('src', berryBlank);
-}).mouseleave(function(){
-  $('#r1').attr('src', berryHover);
-  $('#r2').attr('src', berryHover);
-  $('#r3').attr('src', berryHover);
 })
+
 
 $('#r4').mouseover(function(){
   $('#r1').attr('src', berryHover);
@@ -136,12 +129,8 @@ $('#r4').mouseover(function(){
   $('#r2').attr('src', berryBlank);
   $('#r3').attr('src', berryBlank);
   $('#r4').attr('src', berryBlank);
-}).mouseleave(function(){
-  $('#r1').attr('src', berryHover);
-  $('#r2').attr('src', berryHover);
-  $('#r3').attr('src', berryHover);
-  $('#r4').attr('src', berryHover);
 })
+
 
 $('#r5').mouseover(function(){
   $('#r1').attr('src', berryHover);
@@ -155,13 +144,7 @@ $('#r5').mouseover(function(){
   $('#r3').attr('src', berryBlank);
   $('#r4').attr('src', berryBlank);
   $('#r5').attr('src', berryBlank);
-}).mouseleave(function(){
-  $('#r1').attr('src', berryHover);
-  $('#r2').attr('src', berryHover);
-  $('#r3').attr('src', berryHover);
-  $('#r4').attr('src', berryHover);
-  $('#r5').attr('src', berryHover);
-})
+ })
 
 //rate choice event
 function rateChoice() {
