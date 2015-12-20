@@ -75,7 +75,13 @@ button {
   margin: 1em 2em 1em 1em;
 }
 
-/* Right-side stuff - description, map, search results */
+/* #firstFieldset label, #secondFieldset label {
+  display: block; } */
+
+/* #secondFieldset input {
+  display: inline; } */
+
+/* Right-side stuff - description and map */
 
 .formwrapper {
   display: block; }
@@ -87,7 +93,7 @@ button {
   color: #CD2C24;
   margin-top: 1em; }
 
-#hungry { /* Seriously just the word "Hungry?" on the homepage. */
+#hungry { /* Just the word "Hungry?" on the homepage */
   font-weight: bold; }
 
 .description {
@@ -107,6 +113,7 @@ button {
   border: 1px; }
 
 #map {
+/* width:600px; */
 width: 90%;
 height:456px;
 min-width: 300px;
@@ -118,10 +125,8 @@ position: relative; }
   margin: auto; }
 
 tr {
-  margin-bottom: 2em; }
-
-.resultsName { /* Bolds search result name, leaves alone addresses */
-  font-weight: bold; }
+  margin-bottom: 2em;
+}
 
 /* For REVIEW.HTML ********************************************************** */
 
@@ -142,8 +147,8 @@ tr {
   margin-top: 1em;
   margin-right: 6em; }
 
-.rating {
-  display: inline; }
+/*.rating {
+  display: inline; }*/
 
 .reviewWrapper {
   margin: auto auto auto 2em; }
@@ -152,3 +157,49 @@ tr {
 
 .name {
   font-weight: bold; }
+
+
+/* For rating**************************************************************** */
+.rateTitle {
+  color: white;
+  font-size: 1em;
+  margin-top: 10px;
+}
+
+.ratings {
+  /*margin-right: 200px;*/
+
+/*  border: solid;*/
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  -webkit-justify-content:center;
+}
+
+.rateberrys {
+  display: flex;
+  flex-direction: row;
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+  width: 200px;
+  /*justify-content: space-around;
+  -webkit-justify-content: space-around;*/
+}
+
+.berrys {
+  border:solid black 0px;
+}
+
+/*#ratingsimage{
+  height: 300px;
+  width: 300px;
+  border: solid white;
+  border-width: 2px 2px 15px 2px;
+}*/
+
+#rateDiv{
+  align-self:center;
+  -webkit-align-self:center;
+}
