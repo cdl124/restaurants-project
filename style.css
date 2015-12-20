@@ -75,13 +75,7 @@ button {
   margin: 1em 2em 1em 1em;
 }
 
-/* #firstFieldset label, #secondFieldset label {
-  display: block; } */
-
-/* #secondFieldset input {
-  display: inline; } */
-
-/* Right-side stuff - description and map */
+/* Right-side stuff - description, map, search results */
 
 .formwrapper {
   display: block; }
@@ -93,7 +87,7 @@ button {
   color: #CD2C24;
   margin-top: 1em; }
 
-#hungry { /* Just the word "Hungry?" on the homepage */
+#hungry { /* Seriously just the word "Hungry?" on the homepage. */
   font-weight: bold; }
 
 .description {
@@ -113,7 +107,6 @@ button {
   border: 1px; }
 
 #map {
-/* width:600px; */
 width: 90%;
 height:456px;
 min-width: 300px;
@@ -125,8 +118,10 @@ position: relative; }
   margin: auto; }
 
 tr {
-  margin-bottom: 2em;
-}
+  margin-bottom: 2em; }
+
+.resultsName { /* Bolds search result name, leaves alone addresses */
+  font-weight: bold; }
 
 /* For REVIEW.HTML ********************************************************** */
 

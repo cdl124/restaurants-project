@@ -18,11 +18,20 @@
 <main>
 
 <aside>
+
 <form id = "filterForm">
+
   <fieldset>
+
     <legend>Make One or More Selections Below:</legend>
     <hr />
-      <form id = "distanceOfRes">
+       <form id= 'available'>
+        <input type ='radio' name='openNow' value ='true' checked>Open Right Now
+        <br>
+        <input type="radio" name='openNow' value ='false'>All Restaurants in the Area
+        <br>
+        </form>
+        <form id = "distanceOfRes">
         <input type="radio" name="radius" value="100" checked>300 feet
         <br>
         <input type="radio" name="radius" value="150">450 feet

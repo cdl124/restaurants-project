@@ -31,12 +31,8 @@ function callback(results, status) {
     for (var i = 0; i < results.length; i++) {
       createMarker(results[i]);
 
-// BEGIN code that's gonna get replaced
 
-  $('.restaurants').append('<tr><td>'+ (i + 1) + ' : ' +results[i].name + ' ' + results[i].vicinity + '</td></tr>');
-    // $('.restaurants').append('<td>'+ results[i].vicinity +'</td></tr>');
-
-// END code that's gonna get replaced
+  $('.restaurants').append('<tr><td>'+ (i + 1) + ' : <span class="resultsName">' +results[i].name + '</span> ' + results[i].vicinity + '</td></tr>');
     }
   }
 }
@@ -56,14 +52,14 @@ function createMarker(place) {
 }
 
 
-document.getElementById('search'),addEventListener('click', function (event) {
+document.getElementById('search'),addEventListener('submit', function (event) {
 var maxPriceLevel = $('input[name="maxPriceLevel"]:checked').val();
 var radius = $('input[name="radius"]:checked').val();
 
   // var maxPriceLevel = event.target.maxPriceLevel.value;
   // var radius = event.target.radius.value;
 
- 
+
 initMap(maxPriceLevel, radius);
 });
   // google.maps.event.addListener(button, 'click', function() {
