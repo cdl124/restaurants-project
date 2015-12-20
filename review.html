@@ -42,7 +42,7 @@
     <!-- </fieldset>
 
     <fieldset id ='secondFieldset'> -->
-    <label for='rating'>RATING</label>
+   <!--  <label for='rating'>RATING</label>
 
       <input type="radio" id="star5" name="rating" class='rating' value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
 
@@ -63,15 +63,22 @@
       <input type="radio" id="star1" name="rating" class='rating' value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
 
       <input type="radio" id="starhalf" name="rating" class='rating' value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
-
-
+ -->
+ <div class="ratings">
+                  <!--   <img id="ratingsimage" src="images/people.jpg"> -->
+                      <h3 class="rateTitle">How was the restaurant?</h3>
+                      <div id="rateDiv" class="rateberrys">
+                        <img id="r1" class="berrys" src="images/strawberry.png">
+                        <img id="r2" class="berrys" src="images/strawberry.png">
+                        <img id="r3" class="berrys" src="images/strawberry.png">
+                        <img id="r4" class="berrys" src="images/strawberry.png">
+                        <img id="r5" class="berrys" src="images/strawberry.png">
+                      </div>
+                    </div>
       <label for='opinion'>Your Opinion Here:</label>
 
       <textarea name='comment' id='comment'></textarea><br />
 
-    <!--
-
-      <input type='hidden' name='articleid' id='articleid' value='<? echo $_GET["id"]; ?>' /> -->
 
       <input type='submit' value='Submit' />
 
@@ -80,5 +87,10 @@
     </fieldset>
   </div>
 </main>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<!-- <script src="../structure/homepage.js"></script> -->
+<script src="script.js"></script>
+
 </body>
 </html>
