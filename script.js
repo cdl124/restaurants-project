@@ -18,7 +18,7 @@ function initMap(maxPriceLevel, radius) {
   var service = new google.maps.places.PlacesService(map);
   service.nearbySearch({
     location: CodeFellows,
-    radius: 500,
+    radius: 600,
     types: ['restaurant', 'cafe','bakery', 'meal_takeaway', 'food', 'point_of_interest','bar'],
     openNow: true,
     maxPriceLevel: 1
@@ -31,12 +31,8 @@ function callback(results, status) {
     for (var i = 0; i < results.length; i++) {
       createMarker(results[i]);
 
-// BEGIN code that's gonna get replaced
 
       $('.restaurants').append('<tr><td>'+ (i + 1) + ' : ' +results[i].name + ' ' + results[i].vicinity + '</td></tr>');
-    // $('.restaurants').append('<td>'+ results[i].vicinity +'</td></tr>');
-
-// END code that's gonna get replaced
     }
   }
 }
@@ -55,21 +51,14 @@ function createMarker(place) {
   });
 }
 
-
 document.getElementById('search'),addEventListener('submit', function (event) {
   var maxPriceLevel = $('input[name="maxPriceLevel"]:checked').val();
   var radius = $('input[name="radius"]:checked').val();
+  var zoom = $('input[name="zoom"]:checked').val();
   var openNow = $('input[name="openNow"]:checked').val();
-  // var maxPriceLevel = event.target.maxPriceLevel.value;
-  // var radius = event.target.radius.value;
-
 
   initMap(maxPriceLevel, radius);
 });
-  // google.maps.event.addListener(button, 'click', function() {
-
-
-
 
 // Rating
 var Rater = {
@@ -90,8 +79,8 @@ var avgRating = function(){
 };
 
 // Rating: Mouse over/out events
-var berryBlank = 'images/strawberry.png';
-var berryHover = 'images/cf.png';
+var berryBlank = '../lib/images/strawberry.png';
+var berryHover = '../lib/images/cf.png';
 
 $('#r1').mouseover(function(){
   $('#r1').attr('src', berryHover);
