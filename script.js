@@ -1,8 +1,8 @@
-
+/*global google*/
 // MAP DISPLAY ***********************
 var map;
 var infowindow;
-function initMap(maxPriceLevel, radius) {
+function initMap(maxPriceLevel, radius, zoom, openNow) {
   var CodeFellows = {lat: 47.618217, lng: -122.351832};
   map = new google.maps.Map(document.getElementById('map'), {
     center: CodeFellows,
@@ -10,7 +10,7 @@ function initMap(maxPriceLevel, radius) {
   });
   var marker=new google.maps.Marker({
     position:CodeFellows,
-    icon:'images/cf.png'
+    icon:'./lib/images/cf.png'
   });
 
   marker.setMap(map);
@@ -18,10 +18,10 @@ function initMap(maxPriceLevel, radius) {
   var service = new google.maps.places.PlacesService(map);
   service.nearbySearch({
     location: CodeFellows,
-    radius: 600,
+    radius: 300,
     types: ['restaurant', 'cafe','bakery', 'meal_takeaway', 'food', 'point_of_interest','bar'],
     openNow: true,
-    maxPriceLevel: 1
+    maxPriceLevel: 4
     // Can add maxPrice: 1,2,3,etc. via the 'submit' event listener? MaxPriceLevel:1-4
   }, callback);
 }
@@ -51,13 +51,13 @@ function createMarker(place) {
   });
 }
 
-document.getElementById('search'),addEventListener('submit', function (event) {
+document.getElementById('search'),addEventListener('submit', function(event){
   var maxPriceLevel = $('input[name="maxPriceLevel"]:checked').val();
   var radius = $('input[name="radius"]:checked').val();
   var zoom = $('input[name="zoom"]:checked').val();
   var openNow = $('input[name="openNow"]:checked').val();
 
-  initMap(maxPriceLevel, radius);
+  initMap(maxPriceLevel, radius, zoom, openNow);
 });
 
 // Rating
