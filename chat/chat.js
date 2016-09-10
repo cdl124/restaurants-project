@@ -1,8 +1,4 @@
-// Here's the constructor for the individual comments
-//
-/* related back to what we know
- *
- */
+
 
 var Comment = function(name,restaurant, text) {
   this.name = name;
@@ -37,27 +33,27 @@ var renderAllComments = function() {
 var handleCommentSubmit = function(event) {
   event.preventDefault();
 
-   if (!event.target.says.value || !event.target.where.value || !event.target.who.value) {
+  if (!event.target.says.value || !event.target.where.value || !event.target.who.value) {
     return alert('Fields cannot be empty!');
-   }
+  }
 
-   var commenter = event.target.who.value;
-   var location = event.target.where.value;
-   var remark = event.target.says.value;
+  var commenter = event.target.who.value;
+  var location = event.target.where.value;
+  var remark = event.target.says.value;
 
-   console.log(commenter);
-   console.log(location);
-   console.log(remark);
+  console.log(commenter);
+  console.log(location);
+  console.log(remark);
 
-   var newComment = new Comment(commenter, location, remark);
+  var newComment = new Comment(commenter, location, remark);
 
-   console.log('Comment by ' + event.target.who.value + ' at ' + Date());
-   event.target.who.value = null;
-   event.target.where.value = null;
-   event.target.says.value = null;
+  console.log('Comment by ' + event.target.who.value + ' at ' + Date());
+  event.target.who.value = null;
+  event.target.where.value = null;
+  event.target.says.value = null;
 
-   commentData.push(newComment);
-   renderAllComments();
+  commentData.push(newComment);
+  renderAllComments();
 };
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++

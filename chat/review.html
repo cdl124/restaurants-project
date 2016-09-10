@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Restaurant Review</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header>
+  <img class='logo' src='../lib/images/cflogo.png' />
+  <h1>Restaurant Finder</h1>
+  <li><a href="../index.html">Home</a></li>
+
+</header>
+<main>
+
+  <div class='reviewWrapper'>
+    <h3>Leave a Review!</h3>
+    <p class='detail'>Code Fellows students will see your review.</p>
+  </div>
+
+  <div class='reviewForm'>
+    <fieldset id ='firstFieldset'>
+      <legend>Write a review!</legend>
+
+      <form id = 'loginForm' method='post'>
+
+      <label for='who'>Your Name:</label>
+      <input name='who' type='text'>
+
+    <form action="action_page.php">
+      <select name="where" type="text">
+        <option value="choose">Pick a Restaurant</option>
+        <option value="crow">Crow</option>
+        <option value="mario'spizza">Big Mario's New York Style Pizza</option>
+        <option value="laredos">Laredos</option>
+        <option value="marinepolissushi">Marinepolis sushi</option>
+      </select>
+    </form>
+ <div class="ratings">
+                  <!--   <img id="ratingsimage" src="images/people.jpg"> -->
+                      <h3 class="rateTitle">How was the restaurant?</h3>
+                      <div id="rateDiv" class="rateberrys">
+                        <img id="r1" class="berrys" src="../lib/images/strawberry.png">
+                        <img id="r2" class="berrys" src="../lib/images/strawberry.png">
+                        <img id="r3" class="berrys" src="../lib/images/strawberry.png">
+                        <img id="r4" class="berrys" src="../lib/images/strawberry.png">
+                        <img id="r5" class="berrys" src="../lib/images/strawberry.png">
+                      </div>
+                    </div>
+      <label for='says'>Your Opinion Here:</label>
+      <textarea name='comment' id='comment'></textarea><br />
+      <input type='submit' value='Submit' />
+      </form>
+    </fieldset>
+  </div>
+</main>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="chat.js"></script>
+<script src="../script.js"></script>
+
+</body>
+</html>
+<!-- </fieldset>
+
+<fieldset id ='secondFieldset'> -->
+<!--  <label for='rating'>RATING</label>
+
+  <input type="radio" id="star5" name="rating" class='rating' value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+
+  <input type="radio" id="star4half" name="rating" class='rating' value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+
+  <input type="radio" id="star4" name="rating" class='rating' value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+
+  <input type="radio" id="star3half" name="rating" class='rating' value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+
+  <input type="radio" id="star3" name="rating" class='rating' value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+
+  <input type="radio" id="star2half" name="rating" class='rating' value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+
+  <input type="radio" id="star2" name="rating" class='rating' value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+
+  <input type="radio" id="star1half" name="rating" class='rating' value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+
+  <input type="radio" id="star1" name="rating" class='rating' value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+
+  <input type="radio" id="starhalf" name="rating" class='rating' value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+-->

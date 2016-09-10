@@ -9,10 +9,12 @@
 </head>
 <body>
 <header>
-  <img class='logo' src='images/cflogo.png' />
+  <img class='logo' src='./lib/images/cflogo.png' />
   <h1>Restaurant Finder</h1>
   <ul id="links">
     <li><a href="about.html">About the Team</a></li>
+    <li><a href="./chat/review.html">Review Board</a></li>
+
   </ul>
 </header>
 <main>
@@ -30,21 +32,21 @@
         </form>
 
         <form id = "distanceOfRes">
-        <input type="radio" name="radius" value="100" checked>300 feet
+        <input type="radio" name="radius" value="300" checked>300 yards
         <br>
-        <input type="radio" name="radius" value="150">450 feet
+        <input type="radio" name="radius" value="450">450 yards
        <br>
-        <input type="radio" name="radius" value="200">600 feet
+        <input type="radio" name="radius" value="600">600 yards
         <br>
-        <input type="radio" name="radius" value="250">750 feet
+        <input type="radio" name="radius" value="750">750 yards
         <br>
-        <input type="radio" name="radius" value="300">900 feet
+        <input type="radio" name="radius" value="900">900 yards
         <br>
       </form>
 
       <hr>
       <form id = "foodPrice">
-        <input type = "radio" name = "maxPriceLevel" value = "1"checked>$
+        <input type = "radio" name = "maxPriceLevel" value = "1" checked>$
         <br>
         <input type = "radio" name = "maxPriceLevel" value = "2">$$
         <br>
@@ -52,7 +54,7 @@
         <br>
         <input type = "radio" name = "maxPriceLevel" value = "4">$$$$
       </form>
-     <button id = "search" type = "submit">SUBMIT</button>
+     <button id="search" type="submit">SUBMIT</button>
   </fieldset>
 </aside>
 
@@ -67,16 +69,11 @@
 
 
   <div id="map"></div>
-  <!-- <div id="googleMap" style="width:800px;height:608px;"></div> -->
-
 
 <table id='displaySearchResults'>
   <tbody id='searchResults' style="min-height: 100px">
 
     <tr class='restaurants'>
-    <!--<td class='vicinity'></td>
-   <td class='rating'></td> -->
-   <!-- </tr> -->
 
   </tbody>
 </table>
