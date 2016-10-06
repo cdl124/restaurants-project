@@ -51,7 +51,7 @@ function createMarker(place) {
   });
 }
 
-document.getElementById('search'),addEventListener('submit', function(event){
+document.getElementById('search').addEventListener('submit', function(event){
   var maxPriceLevel = $('input[name="maxPriceLevel"]:checked').val();
   var radius = $('input[name="radius"]:checked').val();
   var zoom = $('input[name="zoom"]:checked').val();
